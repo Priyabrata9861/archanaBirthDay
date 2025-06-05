@@ -1,0 +1,63 @@
+.birthday-gate-wrapper {
+    height: 100vh;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .video-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    max-width: 90%;
+    width: 1000px;
+  }
+
+  .birthday-video {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .sparkle-container {
+    position: relative;
+    width: 100vh;
+    height: 100%;
+    overflow:visible;
+  }
+  
+  .sparkle-container::before,
+  .sparkle-container::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background: rgb(49, 7, 219);
+    border-radius: 50%;
+    box-shadow: 
+      10px 10px rgb(168, 25, 25),
+      20px 30px #ecc904,
+      30px 50px #024be7,
+      80px 140px #3cf802,
+      120px 160px #af06e2;
+    animation: sparkle 4s linear infinite;
+  }
+  
+  .sparkle-container::after {
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes sparkle {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 5;
+    }
+    100% {
+      transform: translateY(-100vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+  

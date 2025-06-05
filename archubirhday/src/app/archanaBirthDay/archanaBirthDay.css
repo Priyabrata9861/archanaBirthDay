@@ -1,0 +1,156 @@
+.birthday-bg {
+  background: linear-gradient(135deg, #edbace, #e8e80c);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  text-align: center;
+  animation: backgroundGlow 8s ease-in-out infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes backgroundGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.birthday-card {
+  background: rgba(147, 78, 78, 0.95);
+  border: none;
+  padding: 2.5rem;
+  border-radius: 25px;
+  max-width: 620px;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.birthday-card:hover {
+  transform: translateY(-5px);
+}
+
+.birthday-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #d63384;
+  margin-top: 1rem;
+}
+
+.birthday-text {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+.birthday-button {
+  margin-top: 2rem;
+  font-weight: bold;
+  background-color: #ff69b4;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.birthday-button:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.6);
+}
+
+.birthday-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #ffb6c1;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px #ffcce0;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px #ffb6c1;
+  }
+  100% {
+    box-shadow: 0 0 30px #ff69b4;
+  }
+}
+
+.cake-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.birthday-cake {
+  width: 100px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.big-cake-container {
+  margin-top: 2rem;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.big-cake {
+  width: 300px;
+  animation: pop 1s ease;
+}
+
+.knife {
+  position: absolute;
+  right: 30%;
+  top: 20%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.knife:hover {
+  transform: rotate(-20deg) scale(1.1);
+}
+
+.cut .big-cake {
+  animation: sliceCake 1s forwards;
+}
+
+@keyframes sliceCake {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1) rotate(-3deg) translateY(10px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
