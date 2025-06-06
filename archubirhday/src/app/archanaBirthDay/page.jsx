@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { Container, Button, Card } from 'react-bootstrap';
 import Confetti from 'react-confetti';
 import { motion } from 'framer-motion';
-import './archanaBirthday.css';
+import '../archanaBirthDay/archanaBirthDay.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
