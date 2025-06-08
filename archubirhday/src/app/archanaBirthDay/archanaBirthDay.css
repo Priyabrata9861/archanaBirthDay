@@ -25,10 +25,11 @@
   border: none;
   padding: 2.5rem;
   border-radius: 25px;
-  max-width: 620px;
+  max-width: 600px;
   margin: 0 auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  background-color: #ebfa75f1 !important;
 }
 
 .birthday-card:hover {

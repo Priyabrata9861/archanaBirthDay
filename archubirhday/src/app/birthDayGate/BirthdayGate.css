@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .birthday-gate-wrapper {
-    height: 100vh;
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
   
   .video-card {
     background: rgba(255, 255, 255, 0.1);
@@ -61,3 +64,26 @@
     }
   }
   
+.birthday-heading {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.1rem;
+  background: linear-gradient(90deg, #ff3399, #ffcc00, #33ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
