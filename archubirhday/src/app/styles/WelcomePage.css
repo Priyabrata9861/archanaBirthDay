@@ -145,3 +145,66 @@
       box-shadow: 0 0 5px #1404f5;
     }
   }
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .welcome-title {
+    font-size: 2.5rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .panda-image {
+    width: 120px;
+  }
+
+  .welcome-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-bg {
+    padding: 1.5rem 1rem;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+
+  .panda-image {
+    width: 100px;
+  }
+
+  .balloon {
+    width: 30px;
+    height: 45px;
+  }
+
+  .welcome-card {
+    padding: 1.5rem;
+  }
+
+  .welcome-link {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .bulb-strip {
+    height: 20px;
+  }
+
+  .bulb {
+    width: 8px;
+    height: 8px;
+  }
+}
