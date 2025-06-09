@@ -1,89 +1,188 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Desktop Base Styles */
 .birthday-gate-wrapper {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to right, #ffecd2, #fcb69f);
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* stack heading and video */
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   overflow: hidden;
+  text-align: center;
 }
-  
-  .video-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    max-width: 90%;
-    width: 1000px;
-  }
 
-  .birthday-video {
-    width: 100%;
-    border-radius: 15px;
-  }
-  .sparkle-container {
-    position: relative;
-    width: 100vh;
-    height: 100%;
-    overflow:visible;
-  }
-  
-  .sparkle-container::before,
-  .sparkle-container::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 600px;
-    background: rgb(49, 7, 219);
-    border-radius: 50%;
-    box-shadow: 
-      10px 10px rgb(168, 25, 25),
-      20px 30px #ecc904,
-      30px 50px #024be7,
-      80px 140px #3cf802,
-      120px 160px #af06e2;
-    animation: sparkle 4s linear infinite;
-  }
-  
-  .sparkle-container::after {
-    animation-delay: 1.5s;
-  }
-  
-  @keyframes sparkle {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 5;
-    }
-    100% {
-      transform: translateY(-100vh) scale(0.5);
-      opacity: 0;
-    }
-  }
-  
 .birthday-heading {
   font-family: 'Pacifico', cursive;
-  font-size: 3.1rem;
+  font-size: 3rem;
   background: linear-gradient(90deg, #ff3399, #ffcc00, #33ccff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7);
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  z-index: 10;
   animation: bounce 2s infinite ease-in-out;
+}
+
+.video-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.birthday-video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Sparkle containers (desktop only) */
+.sparkle-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.left-sparkles {
+  left: 0;
+}
+
+.right-sparkles {
+  right: 0;
+}
+
+.sparkle-container::before,
+.sparkle-container::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 400px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow:
+    10px 10px rgb(168, 25, 25),
+    20px 30px #ecc904,
+    30px 50px #024be7,
+    80px 140px #3cf802,
+    120px 160px #af06e2;
+  animation: sparkle 6s linear infinite;
+  opacity: 0.6;
+}
+
+.sparkle-container::after {
+  animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
 }
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
   50% {
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .birthday-heading {
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .video-card {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sparkle-container {
+    display: none; /* hide sparkles on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-heading {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .video-card {
+    padding: 10px;
+    border-radius: 15px;
+  }
+}
+.balloon-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: red;
+  opacity: 0.7;
+  animation: floatUp 10s infinite ease-in;
+}
+
+.balloon::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 15px;
+  background-color: #555;
+  transform: translateX(-50%);
+}
+
+.balloon-1 { left: 10%; animation-delay: 0s; background: #ff4d4d; }
+.balloon-2 { left: 30%; animation-delay: 2s; background: #4d79ff; }
+.balloon-3 { left: 50%; animation-delay: 4s; background: #66ff66; }
+.balloon-4 { left: 70%; animation-delay: 6s; background: #ffcc00; }
+.balloon-5 { left: 90%; animation-delay: 8s; background: #ff66cc; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50vh) rotate(5deg);
+  }
+  100% {
+    transform: translateY(-120vh) rotate(-5deg);
+    opacity: 0;
   }
 }
