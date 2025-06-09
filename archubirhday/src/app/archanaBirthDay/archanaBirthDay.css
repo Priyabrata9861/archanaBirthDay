@@ -1,3 +1,82 @@
+@media (max-width: 768px) {
+  .birthday-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .birthday-title {
+    font-size: 2rem;
+  }
+
+  .birthday-text {
+    font-size: 1rem;
+  }
+
+  .birthday-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .birthday-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .birthday-cake {
+    width: 80px;
+  }
+
+  .big-cake {
+    width: 200px;
+  }
+
+  .knife {
+    right: 10%;
+    top: 15%;
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-bg {
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+  }
+
+  .birthday-title {
+    font-size: 1.6rem;
+  }
+
+  .birthday-text {
+    font-size: 0.9rem;
+  }
+
+  .birthday-photo {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #ffb6c1;
+  }
+
+  .birthday-cake {
+    width: 60px;
+  }
+
+  .birthday-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .big-cake {
+    width: 160px;
+  }
+
+  .knife {
+    right: 5%;
+    top: 10%;
+    width: 50px;
+  }
+}
+
 .birthday-bg {
   background: linear-gradient(135deg, #edbace, #e8e80c);
   min-height: 100vh;
