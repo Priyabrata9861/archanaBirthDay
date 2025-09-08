@@ -44,7 +44,7 @@ function BirthdayGate() {
   }, []);
   return (
      <div className="birthday-gate-wrapper">
-      <h1 className="birthday-heading">🎉 Happy Birthday Archana 🎉</h1>
+      <h1 className="birthday-heading">🎉 Happy Birthday Rashmi 🎉</h1>
       <div className="sparkle-container left-sparkles"></div>
       <div className="video-card">
         <video

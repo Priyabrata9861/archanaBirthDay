@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Archana's Birthday",
+  title: "Rash_chic's Birthday",
   description: "A special birthday celebration page 🎉",
 };
 

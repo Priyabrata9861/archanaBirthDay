@@ -8,7 +8,7 @@ import '../archanaBirthDay/archanaBirthDay.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import Archana from "../archanaBirthDay/Archana.jpg";
+import Rashmi from "../archanaBirthDay/rashmi.jpg";
 import Cake from "../archanaBirthDay/cake.avif";
 
 function ArchanaBirthDay() {
@@ -33,15 +33,15 @@ function ArchanaBirthDay() {
                     <Card className="birthday-card">
                         <Card.Body>
                             <Image
-                                src={Archana}
-                                alt="Archana"
+                                src={Rashmi}
+                                alt="Rashmi"
                                 className="birthday-photo"
                                 width={200}
                                 height={200}
                                 priority
                             />
                             <Card.Title className="birthday-title">
-                                🎂 Happy Birthday Archana! 🎉
+                                🎂 Happy Birthday Sibani! 🎉
                             </Card.Title>
 
                             <Card.Text className="birthday-text">
