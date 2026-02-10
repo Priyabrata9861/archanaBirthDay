@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import "./styles/WelcomePage.css";
-import CutePanda from "./archanaBirthDay/panda.jpeg";
+import CutePanda from "./sonalikaBirthDay/panda.jpeg";
 import Image from 'next/image';
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
         <p className="welcome-subtitle">
           Happiest Birthday to You! 💖 Wishing you a day filled with joy and love.
         </p>
-        <Link href="/archanaBirthDay" className="welcome-link">
+        <Link href="/sonalikaBirthDay" className="welcome-link">
           Go to Your Birthday Surprise 🎁
         </Link>
       </div>

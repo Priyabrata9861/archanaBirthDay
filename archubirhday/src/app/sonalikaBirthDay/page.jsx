@@ -4,12 +4,12 @@ import React, { useRef } from 'react';
 import { Container, Button, Card } from 'react-bootstrap';
 import Confetti from 'react-confetti';
 import { motion } from 'framer-motion';
-import '../archanaBirthDay/archanaBirthDay.css'
+import './archanaBirthDay.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import Sonalika from "../archanaBirthDay/sonalika.jpeg";
-import Cake from "../archanaBirthDay/cake.avif";
+import Sonalika from "./sonalika.jpeg";
+import Cake from "./cake.avif";
 
 function ArchanaBirthDay() {
     const audioRef = useRef(null);
