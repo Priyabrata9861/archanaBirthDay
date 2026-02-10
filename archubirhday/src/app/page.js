@@ -27,7 +27,7 @@ export default function Home() {
           width={186}
           height={271}
         />
-        <h1 className="welcome-title">Welcome Dear Rashmi</h1>
+        <h1 className="welcome-title">Welcome Dear Sonalika</h1>
         <p className="welcome-subtitle">
           Happiest Birthday to You! 💖 Wishing you a day filled with joy and love.
         </p>

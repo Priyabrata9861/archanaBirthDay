@@ -100,7 +100,8 @@
 }
 
 .birthday-card {
-  background: rgba(147, 78, 78, 0.95);
+  /* background: rgba(147, 78, 78, 0.95); */
+  background-image: linear-gradient(to left, orange, purple, pink);
   border: none;
   padding: 2.5rem;
   border-radius: 25px;

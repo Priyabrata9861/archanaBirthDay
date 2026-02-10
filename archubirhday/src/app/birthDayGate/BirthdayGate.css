@@ -4,7 +4,7 @@
 .birthday-gate-wrapper {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  background: linear-gradient(to right, #03f5f5, #fb4e15);
   display: flex;
   flex-direction: column; /* stack heading and video */
   justify-content: flex-start;
@@ -18,7 +18,7 @@
 .birthday-heading {
   font-family: 'Pacifico', cursive;
   font-size: 3rem;
-  background: linear-gradient(90deg, #ff3399, #ffcc00, #33ccff);
+  background: linear-gradient(90deg, #d3066d, #504001, #00b5f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7);
