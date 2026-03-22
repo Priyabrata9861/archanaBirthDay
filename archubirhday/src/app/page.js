@@ -1,7 +1,8 @@
 'use client';
 import Link from "next/link";
 import "./styles/WelcomePage.css";
-import CutePanda from "./sonalikaBirthDay/panda.jpeg";
+import CutePanda from "./ishaBirthDay/panda.jpeg";
+import Isha from './ishaBirthDay/ish2.jpeg'
 import Image from 'next/image';
 
 export default function Home() {
@@ -21,17 +22,17 @@ export default function Home() {
       </div>
       <div className="welcome-card">
         <Image
-          src={CutePanda}
+          src={Isha}
           alt="Cute Panda"
           className="panda-image"
           width={186}
           height={271}
         />
-        <h1 className="welcome-title">Welcome Dear Sonalika</h1>
+        <h1 className="welcome-title">Welcome Dear Isha</h1>
         <p className="welcome-subtitle">
           Happiest Birthday to You! 💖 Wishing you a day filled with joy and love.
         </p>
-        <Link href="/sonalikaBirthDay" className="welcome-link">
+        <Link href="/ishaBirthDay" className="welcome-link">
           Go to Your Birthday Surprise 🎁
         </Link>
       </div>
